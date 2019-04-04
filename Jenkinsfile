@@ -13,6 +13,11 @@ pipeline {
             build 'z_RBAC_dummy2'
           }
         }
+        stage('z_multitenancy_dummy3') {
+          steps {
+            build 'z_multitenancy_dummy3'
+          }
+        }
       }
     }
   }
