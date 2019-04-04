@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('parallel_run') {
       parallel {
-        stage('parallel_run') {
+        stage('job1') {
           steps {
             build 'sample_job_train'
           }
         }
-        stage('') {
+        stage('job2') {
           steps {
             build 'sample_job_train'
           }
         }
-        stage('') {
+        stage('job3') {
           steps {
             build 'sample_job_train'
           }
