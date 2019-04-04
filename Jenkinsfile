@@ -1,21 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('parallel_run') {
       parallel {
-        stage('error') {
+        stage('parallel_run') {
           steps {
-            build 'z_Sanity_dummy1'
+            build 'sample_job_train'
           }
         }
-        stage('z_RBAC_dummy2') {
+        stage('') {
           steps {
-            build 'z_RBAC_dummy2'
+            build 'sample_job_train'
           }
         }
-        stage('z_multitenancy_dummy3') {
+        stage('') {
           steps {
-            build 'z_multitenancy_dummy3'
+            build 'sample_job_train'
           }
         }
       }
